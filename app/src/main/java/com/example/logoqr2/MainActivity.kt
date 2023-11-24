@@ -39,10 +39,11 @@ class MainActivity : AppCompatActivity() {
                 shape = QrVectorLogoShape
                     .Circle
             }
-            shapes {
-                frame = QrVectorFrameShape
-                    .RoundCorners(.15f)
-            }
+            // FIXME On Android API 22 qr code with rounded corners is not scannable
+//            shapes {
+//                frame = QrVectorFrameShape
+//                    .RoundCorners(.15f)
+//            }
             errorCorrectionLevel = QrErrorCorrectionLevel.High
         }
 
